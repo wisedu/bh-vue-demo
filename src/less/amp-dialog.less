@@ -1,0 +1,118 @@
+@gutter-h: 15px;  //左右空隙
+@gutter-v: 5px; //上下空隙
+.amp-dialog {
+    display: none;
+    
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1109;
+    overflow: auto;
+    &.amp-dialog__active {
+        display: block;
+    }
+}
+
+.amp-dialog-content {
+    position: relative;
+    margin-top:100px;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 1111;
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5)
+}
+.amp-dialog-mask {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1110;
+    background-color:rgba(0,0,0,.5);
+    
+    .amp-dialog--mask & {
+        display: block;
+    }
+    
+}
+.amp-dialog-wrap {
+    background-color: white;
+    border-radius: 4px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;   
+}
+.amp-dialog-header{
+    position: relative;
+    padding: @gutter-v @gutter-h;
+    border-bottom: 1px solid @gray-lv5;
+}
+.amp-dialog-title {
+    display: inline-block;
+}
+.amp-dialog-close {
+    position: absolute;
+    top: 50%;
+    margin-top: -12px;
+    right: @gutter-h;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: no-repeat url(../../img/icon/icon.png) -352px 0;
+    
+   cursor: pointer;
+}
+
+.amp-dialog-body {
+    min-height: 300px;
+    padding: @gutter-v @gutter-h;
+    overflow: auto;
+    
+    iframe {
+        border: none;
+        outline: none;
+        width: 100%;
+        height: 100%;
+    }
+}
+.amp-dialog-footer {
+    text-align: right;
+    border-top: 1px solid @gray-lv5;
+    padding: @gutter-h;
+    
+    button {
+        border: none;
+        margin: 0 8px;  
+        padding: 6px 12px;
+        border-radius: 2px;
+        box-shadow: 0 1px 2px rgba(0,0,0,.20);
+        &:hover {
+            box-shadow: 0 2px 6px rgba(0,0,0,.20);
+        }
+    }
+}
+
+.amp-dialog-ok {
+    background-color: @brand-primary;
+    color: @gray-lv5;
+}
+
+.amp-dialog-cancel {
+    background-color: #fff;
+    color: @gray-lv1;
+}
+
+
+//alert
+
+.amp-dialog__alert .amp-dialog-cancel,
+.amp-dialog__alert .amp-dialog-close {
+    display: none;
+}

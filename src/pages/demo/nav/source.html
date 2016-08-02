@@ -1,0 +1,53 @@
+<code>
+    <pre>
+<template>
+    <div class="bh-mv-8 bh-row">
+        <div class="bh-col-md-2">
+            <div style='width: 400px;'>
+                <bh-nav :source='navMenus' @trigger='navClick'></bh-nav>
+            </div>
+        </div>
+        <div class="bh-col-md-10">
+            <router-view></router-view>
+        </div>
+    </div>
+</template>
+
+<script>
+    import router from 'src/router'
+    import BhCard from 'components/bh-card/bhCard'
+    import BhNav from 'components/bh-nav/bhNav'
+
+    export default {
+        data: function() {
+            return {
+                navMenus: [
+                    {id: 1, name: '首页应用', icon: 'iconfont icon-home', type: 'link', url: '/nav', active: true},
+                    {id: 8, name: '消息', icon: 'icon-envelope', type: 'link', url: '/nav/demo/msg'},
+                    {id: 2, name: '云端中心', icon: 'iconfont icon-cloud', expand: false, children: [
+                        {id: 21, name: '收到的消息', type: 'link', url: '/nav/demo/cloud/receive'},
+                        {id: 22, name: '发出的消息', type: 'link', url: '/nav/demo/cloud/send'},
+                        {id: 23, name: '收藏的消息', type: 'link', url: '/nav/demo/cloud/favorite'},
+                    ]},
+                    {id: 3, name: '运营数据中心', icon: 'icon-moon', expand: false, children: [
+                        {id: 31, name: '收到的消息', type: 'link', url: '/nav/demo/data/receive'},
+                        {id: 32, name: '发出的消息', type: 'link', url: '/nav/demo/data/send'},
+                        {id: 33, name: '收藏的消息', type: 'link', url: '/nav/demo/data/favorite'},
+                    ]},
+                    {id: 4, name: '打印模板', icon: 'iconfont icon-print', type: 'trigger'},
+                    {id: 5, name: '权限管理', icon: 'iconfont icon-lock', type: 'trigger'},
+                    {id: 6, name: '用户角色', icon: 'icon-user', type: 'trigger'},
+                    {id: 7, name: '帮助与支持', icon: 'icon-question-sign', type: 'trigger'}
+                ]
+            }
+        },
+        methods: {
+            navClick: function(item) {
+                console.log(item.name + " selected!");
+            }
+        },
+        components: {BhCard, BhNav}
+    }
+</script>
+    </pre>
+</code>
