@@ -1,6 +1,7 @@
 # bh-vue 组件库Demo
 
 > [bh-vue](https://www.npmjs.com/package/bh-vue)组件库的演示工程
+
 > 演示地址 [https://wisedu.github.io/bh-vue-demo](https://wisedu.github.io/bh-vue-demo)
 
 ## Build Setup
