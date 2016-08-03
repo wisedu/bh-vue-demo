@@ -1,0 +1,14 @@
+{
+    "plugins": ["node_modules/jsdoc-vue"],
+    "source": {
+        "include": ["node_modules/bh-vue"],
+        "includePattern": "\\.(vue|js)$"
+    },
+    "opts": {
+        "encoding": "utf8",
+        "destination": "Z:\\FE\\vue-doc\\",
+        "recurse": true,
+        "readme": "build/doc-tutorial/readme.md"
+    },
+    "allowUnknownTags": true
+}

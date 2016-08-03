@@ -41,7 +41,7 @@
                     <h3 class='bh-mv-8'>ajax获取数据</h3>
                     <div class="bh-row">
                         <div class="bh-col-md-6">
-                            <bh-dropdown v-ref:dd3 root='a1' display-member='name' value-member='id' url='http://localhost:3000/mock/datatable.json'></bh-dropdown>
+                            <bh-dropdown v-ref:dd3 root='a1' display-member='name' value-member='id' url='./mock/datatable.json'></bh-dropdown>
                         </div>
                     </div>
                 </div>

@@ -1,3 +1,6 @@
 export default {
-    'skin': 'blue'
+    'skin': 'blue',
+    'contextPath': (() => {
+        return window.location.href.split('#!')[0];
+    })()
 };

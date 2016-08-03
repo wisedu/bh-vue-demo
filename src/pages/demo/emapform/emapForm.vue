@@ -6,7 +6,7 @@
             </header>
             <div class="bh-row">
                 <div class="bh-col-md-12 bh-mt-32">
-                    <button @click='validate'>校验</button>
+                    <bh-button @click='validate' type='primary' class='bh-mb-16'>校验</bh-button>
                     <emap-form v-ref:ef :options='options' :container='container'></emap-form>
                 </div>
             </div>
@@ -15,6 +15,8 @@
 </template>
 
 <script>
+    import Sys from 'config/sysconf'
+    import BhButton from 'components/bh-button/bhButton';
     import EmapForm from 'components/emap-form/emapForm.vue';
 
     export default {
@@ -22,9 +24,9 @@
             return {
                 container: null,
                 options: {
-                    pagePath: 'http://res.wisedu.com/fe_components/mock/page_model.json',
-                    modelName: 'FORM_GROUP',
-                    readonly: true,
+                    pagePath: Sys.contextPath + 'mock/emap/school.json',
+                    modelName: '编辑学校信息',
+                    readonly: false,
                     model: 'v'
                 }
             };
@@ -37,6 +39,6 @@
         beforeCompile () {
             this.container = this.$el;
         },
-        components: {EmapForm}
+        components: {BhButton, EmapForm}
     };
 </script>

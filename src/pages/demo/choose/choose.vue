@@ -12,6 +12,7 @@
                     right-width='30%'
                     :left-params='{username:222}'
                     :right-params='{username:111}'
+                    type='get'
                     left-source-url='/mock/datatable.json' :leftcells-renderer='leftcellsRenderer'
                     :rightcells-renderer='leftcellsRenderer'
                     :right-cols='rightCols'
@@ -36,6 +37,7 @@
                     <bh-choose
                         v-ref:choose3
                         width='800'
+                        type='get'
                         left-width='50%'
                         right-width='50%'
                         :left-params='{username:222}'
@@ -134,7 +136,7 @@
                 }],
                 localSearchField: 'name',
                 id: 'id',
-                type: 'post',
+                type: 'get',
                 multiSelect: true,
                 showOrder: false,
                 title: '添加应用',
@@ -170,7 +172,7 @@
                 rightLocalData: null,
                 localSearchField: '',
                 id: '',
-                type: 'post',
+                type: 'get',
                 multiSelect: true,
                 showOrder: false,
                 title: '添加应用',

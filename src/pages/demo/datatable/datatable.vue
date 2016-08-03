@@ -13,7 +13,7 @@
                     <button class='bh-btn bh-btn-primary' @click='getCurrent'>获取选中行(鼠标点击)</button>
                 </div>
                 <div class="bh-col-md-12 bh-mv-8 bh-mb-16">
-                    <bh-datatable pager-mode='default' root='a1' :show-header='true' v-ref:dt1 :columns='columns' :pageable='true' :selected-rows.sync='selectedRows' :checked-rows.sync='checkedRows' :checkable='true' url='/mock/datatable.json' :query-params='queryParams' :operations='operations' @edit='edit' @del='del' :callbacks='callbacks' @row-select='rowSelect'></bh-datatable>
+                    <bh-datatable pager-mode='default' root='a1' :show-header='true' v-ref:dt1 :columns='columns' :pageable='true' :selected-rows.sync='selectedRows' :checked-rows.sync='checkedRows' :checkable='true' url='./mock/datatable.json' :query-params='queryParams' :operations='operations' @edit='edit' @del='del' :callbacks='callbacks' @row-select='rowSelect'></bh-datatable>
                 </div>
             </div>
         </section>

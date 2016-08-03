@@ -7,7 +7,7 @@
             <div class="bh-mv-8 bh-mb-16">
                 <bh-card class='content bh-p-8'>
                     <div>
-                        <emap-search model-url='http://res.wisedu.com/fe_components/mock/advencedQueryModel.json' model-name="TABLE" @search='search'></emap-search>
+                        <emap-search :model-url='url' model-name="模型1" @search='search'></emap-search>
                     </div>
                 </bh-card>
             </div>
@@ -16,10 +16,16 @@
 </template>
 
 <script>
+    import Sys from 'config/sysconf'
     import BhCard from 'components/bh-card/bhCard';
     import EmapSearch from 'components/emap-search/emapSearch';
 
     export default {
+        data () {
+            return {
+                url: Sys.contextPath + 'mock/emap/queryModel.json'
+            };
+        },
         methods: {
             search (params) {
                 console.log(params);

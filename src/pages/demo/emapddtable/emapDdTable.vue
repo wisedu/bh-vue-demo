@@ -15,13 +15,14 @@
 </template>
 
 <script>
+    import Sys from 'config/sysconf'
     import EmapDdTable from 'components/emap-dd-table/emapDdTable.vue';
 
     export default {
         data () {
             return {
                 options: {
-                    url: 'http://localhost:3000/mock/emap/code.json'
+                    url: Sys.contextPath + 'mock/emap/code.json'
                 }
             };
         },

@@ -7,12 +7,12 @@ module.exports = {
     index: path.resolve(__dirname, '../dist/index.html'),
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: '',
-    assetsPublicPath: '/',
+    assetsPublicPath: 'https://wisedu.github.io/bh-vue-demo/',
     productionSourceMap: true
   },
   dev: {
     env: require('./dev.env'),
-    assetsSubDirectory: 'static',
+    assetsSubDirectory: '',
     assetsPublicPath: '/',
     port: 3000,
     proxyTable: {

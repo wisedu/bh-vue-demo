@@ -32,6 +32,7 @@
 </template>
 
 <script>
+    import Sys from 'config/sysconf'
     import BhWindow from 'components/bh-window/bhWindow.vue';
     import EmapEditor from 'components/emap-editor/emapEditor.vue';
 
@@ -39,7 +40,7 @@
         data () {
             return {
                 options: {
-                    contextPath: 'http://localhost:3000/mock/emap/major-model.json'
+                    contextPath: Sys.contextPath + 'mock/emap/major-model.json'
                 }
             };
         },

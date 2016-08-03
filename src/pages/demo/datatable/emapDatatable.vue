@@ -8,6 +8,7 @@
 </template>
 
 <script>
+    import Sys from 'config/sysconf'
     import EmapDatatable from 'components/emap-datatable/emapDatatable.vue';
     import EmapForm from 'components/emap-form/emapForm.vue';
     export default {
@@ -15,7 +16,8 @@
             return {
                 options: {
                     // pagePath: 'http://localhost:3000/mock/emap/major-model.json',
-                    pagePath: 'http://localhost:3000/mock/emap/campus-meta.json',
+                    pagePath: Sys.contextPath + 'mock/emap/campus-meta.json',
+                    method: 'GET',
                     action: 'feedback_list',
                     selectionMode: 'singleRow',
                     params: {
@@ -48,8 +50,8 @@
                     }
                 },
                 formOpts: {
-                    pagePath: 'http://localhost:3000/mock/emap/campus-meta.json',
-                    modelName: 'campus_addOrEditCampus'
+                    pagePath: Sys.contextPath + 'mock/emap/school.json',
+                    modelName: '编辑学校信息'
                 },
                 formContainer: ''
             };

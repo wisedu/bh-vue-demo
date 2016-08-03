@@ -14,6 +14,7 @@
 </template>
 
 <script>
+    import Sys from 'config/sysconf'
     import EmapGrid from 'components/emap-grid/emapGrid.vue';
 
     var getCustomColumns = () => {
@@ -40,11 +41,12 @@
         data () {
             return {
                 options: {
-                    pagePath: 'http://localhost:3000/mock/emap/major-model.json',
+                    pagePath: Sys.contextPath + 'mock/emap/major-model.json',
                     action: 'TABLE',
                     template: require('./cardTpl.html'),
                     customColumns: getCustomColumns(),
-                    sortable: true
+                    sortable: true,
+                    method: 'GET'
                 }
             };
         },

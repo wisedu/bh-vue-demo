@@ -1,0 +1,238 @@
+{"searchMeta": {
+    "name": "083a04b8-0439-4103-891d-aa7d7634d575",
+    "id": "t_jzg_jbxx_select_condition",
+    "xtype": "customSearcher",
+    "appName": "应用1",
+    "modelName": "模型1",
+    "controls": [
+    {
+        "name": "XM",
+        "caption": "姓名",
+        "dataType": "String",
+        "defaultBuilder": "equal",
+        "builderList": "cbl_String",
+        "quickSearch": true,
+        "xtype": "tree",
+        "url" : "http://res.wisedu.com/fe_components/mock/tree.json",
+        "dataSize": 90
+    },
+    {
+        "name": "NNQJ",
+        "caption": "年龄区间",
+        "dataType": "String",
+        "defaultBuilder": "equal",
+        "builderList": "cbl_String",
+        "xtype": "date-full"
+    },
+    {
+        "name": "身高",
+        "caption": "身高",
+        "dataType": "String",
+        "defaultBuilder": "equal",
+        "builderList": "cbl_String",
+        "xtype": "number"
+    },
+    {
+        "name": "XH",
+        "caption": "学号",
+        "dataType": "String",
+        "defaultBuilder": "equal",
+        "builderList": "cbl_String",
+        "xtype": "date-local",
+        "quickSearch": true,
+        "quickSearch": true,
+        "url" : "http://res.wisedu.com/fe_components/mock/tree.json",
+        "dataSize": 20
+    },
+    {
+        "name": "XBDM",
+        "caption": "性别",
+        "dataType": "String",
+        "defaultBuilder": "equal",
+        "builderList": "cbl_List",
+        "url": "http://res.wisedu.com/fe_components/mock/select.json",
+        "xtype": "radiolist",
+        "search.quickSearchXtype": "select",
+        "dataSize": 1,
+        "quickSearch": true
+    },
+    {
+        "name": "PYCCDM",
+        "caption": "培养层次",
+        "dataType": "String",
+        "defaultBuilder": "equal",
+        "builderList": "cbl_String",
+        "url": "/code/9ec58134-0517-4664-8969-5342ffcaf190.do",
+        "xtype": "date-local",
+        "dataSize": 1
+    },
+    {
+        "name": "DWDM",
+        "caption": "院系",
+        "dataType": "String",
+        "defaultBuilder": "equal",
+        "builderList": "cbl_String",
+        "quickSearch": true,
+        "url": "http://res.wisedu.com/fe_components/mock/button_group_options.json",
+        "xtype": "multi-buttonlist",
+        "dataSize": 10
+    },
+    {
+        "name": "ZYDM",
+        "caption": "专业",
+        "dataType": "String",
+        "defaultBuilder": "equal",
+        "builderList": "cbl_String",
+        "quickSearch": false,
+        "url": "/code/94b15a8a-9b45-4455-b254-1ec2065028d9.do",
+        "xtype": "select",
+        "dataSize": 6
+    },
+    {
+        "name": "BJDM",
+        "caption": "班级",
+        "dataType": "String",
+        "defaultBuilder": "equal",
+        "builderList": "cbl_String",
+        "url": "/code/ab43d66a-9778-49b1-b3e0-0ce46317fed9.do",
+        "xtype": "select",
+        "dataSize": 100,
+        "hidden": true
+    },
+    {
+        "name": "XZNJ",
+        "caption": "现在年级",
+        "dataType": "String",
+        "defaultBuilder": "equal",
+        "builderList": "cbl_String",
+        "quickSearch": false,
+        "xtype": "text",
+        "dataSize": 10
+    },
+    {
+        "name": "XQDM",
+        "caption": "校区",
+        "dataType": "String",
+        "defaultBuilder": "equal",
+        "builderList": "cbl_String",
+        "quickSearch": false,
+        "url": "/code/2eac9654-d335-4449-9ab0-42a32a3a0fda.do",
+        "xtype": "select",
+        "dataSize": 40
+    },
+    {
+        "name": "SSQDM",
+        "caption": "宿舍区",
+        "dataType": "String",
+        "defaultBuilder": "equal",
+        "builderList": "cbl_String",
+        "url": "/code/f4fbe313-bcf7-4599-90ff-f89db2716417.do",
+        "xtype": "select",
+        "dataSize": 40,
+        "hidden": true
+    },
+    {
+        "name": "SSLDM",
+        "caption": "宿舍楼",
+        "dataType": "String",
+        "defaultBuilder": "equal",
+        "builderList": "cbl_String",
+        "quickSearch": false,
+        "url": "/code/c043b195-d8a2-498d-86b5-09e27da23b2d.do",
+        "xtype": "select",
+        "dataSize": 40
+    },
+    {
+        "name": "FJH",
+        "caption": "房间号",
+        "dataType": "String",
+        "defaultBuilder": "equal",
+        "builderList": "cbl_String",
+        "quickSearch": true,
+        "xtype": "text",
+        "dataSize": 40
+    },
+    {
+        "name": "SFZJH",
+        "caption": "身份证件号",
+        "dataType": "String",
+        "defaultBuilder": "equal",
+        "builderList": "cbl_String",
+        "quickSearch": true,
+        "grid.hidden": true,
+        "xtype": "text",
+        "dataSize": 20
+    }
+],
+    "builderLists": {
+        "cbl_String": [{
+            "name": "include",
+            "caption": "包含"
+        }, {
+            "name": "equal",
+            "caption": "等于"
+        }, {
+            "name": "notEqual",
+            "caption": "不等于"
+        }, {
+            "name": "beginWith",
+            "caption": "以..开始"
+        }, {
+            "name": "endWith",
+            "caption": "以..结束"
+        },{
+            "name": "m_value_include",
+            "caption": "多值包含"
+        }],
+        "cbl_List": [{
+            "name": "equal",
+            "caption": "等于"
+        }, {
+            "name": "notEqual",
+            "caption": "不等于"
+        }],
+        "cbl_upper_String": [{
+            "name": "upper_equal",
+            "caption": "等于"
+        }, {
+            "name": "upper_notEqual",
+            "caption": "不等于"
+        }, {
+            "name": "upper_include",
+            "caption": "包含"
+        }, {
+            "name": "upper_notInclude",
+            "caption": "不包含"
+        }, {
+            "name": "upper_beginWith",
+            "caption": "以..开始"
+        }, {
+            "name": "upper_endWith",
+            "caption": "以..结束"
+        }],
+        "cbl_Other": [{
+            "name": "equal",
+            "caption": "等于"
+        }, {
+            "name": "notEqual",
+            "caption": "不等于"
+        }, {
+            "name": "more",
+            "caption": "大于"
+        }, {
+            "name": "less",
+            "caption": "小于"
+        }, {
+            "name": "moreEqual",
+            "caption": "大于等于"
+        }, {
+            "name": "lessEqual",
+            "caption": "小于等于"
+        }],
+        "cbl_equal_List": [{
+            "name": "equal",
+            "caption": "等于"
+        }]
+    }
+}
+}

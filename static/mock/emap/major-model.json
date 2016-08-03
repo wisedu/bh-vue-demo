@@ -3,7 +3,7 @@
         "name": "TABLE",
         "appName": "专业管理",
         "modelName": "学校专业列表",
-        "url": "http://localhost:3000/mock/emap/major-data.json",
+        "url": "./mock/emap/major-data.json",
         "controls": [{
             "name": "wid",
             "dataType": "String",

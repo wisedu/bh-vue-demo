@@ -23,6 +23,7 @@
 </template>
 
 <script>
+    import Sys from 'config/sysconf'
     import EmapDdTree from 'components/emap-dd-tree/emapDdTree.vue';
 
     export default {
@@ -30,7 +31,7 @@
             return {
                 options1: {
                     // checkboxes:true,
-                    url: 'http://localhost:3000/mock/emap/ddtree.json',
+                    url: Sys.contextPath + 'mock/emap/ddtree.json',
                     params: {}
                 },
                 options2: {

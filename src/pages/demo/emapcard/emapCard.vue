@@ -14,13 +14,14 @@
 </template>
 
 <script>
+    import Sys from 'config/sysconf'
     import EmapCard from 'components/emap-card/emapCard.vue';
 
     export default {
         data () {
             return {
                 options: {
-                    pagePath: 'http://localhost:3000/mock/emap/major-model.json',
+                    pagePath: Sys.contextPath + 'mock/emap/major-model.json',
                     action: 'TABLE',
                     template: require('./cardTpl.html')
                 }
