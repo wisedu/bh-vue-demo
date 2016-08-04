@@ -2,7 +2,7 @@
     <div class="bh-mv-8 bh-row">
         <div class="bh-col-md-2">
             <div style='width: 400px;'>
-                <bh-nav :source='flatMenus' @trigger='navClick' source-type='flat'></bh-nav>
+                <bh-nav width='240px' :source='flatMenus' @trigger='navClick' source-type='flat'></bh-nav>
             </div>
         </div>
         <div class="bh-col-md-10">
