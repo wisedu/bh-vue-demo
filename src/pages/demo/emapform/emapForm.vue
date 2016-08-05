@@ -6,8 +6,11 @@
             </header>
             <div class="bh-row">
                 <div class="bh-col-md-12 bh-mt-32">
+                    <bh-button @click='edit' type='primary' class='bh-mb-16'>编辑</bh-button>
+                    <bh-button @click='read' type='primary' class='bh-mb-16'>只读</bh-button>
                     <bh-button @click='validate' type='primary' class='bh-mb-16'>校验</bh-button>
-                    <emap-form v-ref:ef :options='options' :container='container'></emap-form>
+                    <div class='clearfix'></div>
+                    <emap-form class='bh-col-md-8' v-ref:ef :options='options' :container='container'></emap-form>
                 </div>
             </div>
         </section>
@@ -15,7 +18,7 @@
 </template>
 
 <script>
-    import Sys from 'config/sysconf'
+    import Sys from 'config/sysconf';
     import BhButton from 'components/bh-button/bhButton';
     import EmapForm from 'components/emap-form/emapForm.vue';
 
@@ -27,13 +30,21 @@
                     pagePath: Sys.contextPath + 'mock/emap/school.json',
                     modelName: '编辑学校信息',
                     readonly: false,
-                    model: 'v'
+                    model: 't'
                 }
             };
         },
         methods: {
             validate () {
                 alert(this.$refs.ef.validate());
+            },
+            edit () {
+                this.options.model = 't';
+                this.options.readonly = false;
+            },
+            read () {
+                this.options.model = 'v';
+                this.options.readonly = true;
             }
         },
         beforeCompile () {
