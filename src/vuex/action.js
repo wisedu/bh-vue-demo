@@ -19,9 +19,13 @@ export const fetchMenus = function ({ dispatch, state }) {
                 'href': '#!/',
                 'active': true  // 该标题为选中状态，必须有一个菜单的该属性是true
             }, {
-                'text': '卡片/面板',
+                'text': '卡片',
                 'icon': 'iconfont icon-menu',
                 'href': '#!/card'
+            }, {
+                'text': '面板',
+                'icon': 'iconfont icon-menu',
+                'href': '#!/panel'
             }, {
                 'text': '下拉框',
                 'icon': 'iconfont icon-menu',
@@ -30,6 +34,10 @@ export const fetchMenus = function ({ dispatch, state }) {
                 'text': '步骤向导',
                 'icon': 'iconfont icon-menu',
                 'href': '#!/stepwizard'
+            }, {
+                'text': '竖向步骤条',
+                'icon': 'iconfont icon-menu',
+                'href': '#!/stepflow'
             }, {
                 'text': '列表选择器',
                 'icon': 'iconfont icon-menu',

@@ -17,6 +17,11 @@ router.map({
             require(['pages/demo/card/card'], resolve);
         }
     },
+    '/panel': {
+        component: (resolve) => {
+            require(['pages/demo/panel/panel'], resolve);
+        }
+    },
     '/dropdown': {
         component: (resolve) => {
             require(['pages/demo/dropdown/dropdown'], resolve);
@@ -30,6 +35,11 @@ router.map({
     '/stepwizard': {
         component: (resolve) => {
             require(['pages/demo/stepwizard/stepwizard'], resolve);
+        }
+    },
+    '/stepflow': {
+        component: (resolve) => {
+            require(['pages/demo/stepflow/stepflow'], resolve);
         }
     },
     '/datatable': {
