@@ -62,9 +62,6 @@
     import {fetchTreeData} from 'vx/action';
     import {treeData} from 'vx/getters';
 
-    import BhCard from 'components/bh-card/bhCard';
-    import BhTree from 'components/bh-tree/bhTree';
-
     export default {
         data () {
             return {
@@ -169,7 +166,6 @@
             }
         },
         store: store,
-        components: {BhCard, BhTree},
         ready () {
             this.fetchTreeData();
         },

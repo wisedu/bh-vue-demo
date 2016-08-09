@@ -35,9 +35,6 @@
 </template>
 
 <script>
-    import BhCard from 'components/bh-card/bhCard';
-
     export default {
-        components: {BhCard}
     };
 </script>

@@ -1,4 +1,3 @@
-import Vue from 'vue';
 import Vuex from 'vuex';
 import menus from './modules/menus';
 import tree from './modules/tree';

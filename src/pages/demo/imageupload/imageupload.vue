@@ -14,11 +14,7 @@
 </template>
 
 <script>
-    import BhCard from 'components/bh-card/bhCard';
-    import EmapImageupload from 'components/emap-imageupload/emapImageupload';
-
     export default {
-        components: {BhCard, EmapImageupload}
     };
 </script>
 

@@ -14,8 +14,6 @@
 </template>
 
 <script>
-    import EmapLinkage from 'components/emap-linkage/emapLinkage.vue';
-
     export default {
         data () {
             return {
@@ -30,7 +28,6 @@
                     size: 5120
                 }
             };
-        },
-        components: {EmapLinkage}
+        }
     };
 </script>

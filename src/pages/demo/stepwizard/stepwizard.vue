@@ -45,10 +45,6 @@
 </template>
 
 <script>
-    import BhCard from 'components/bh-card/bhCard';
-    import BhButton from 'components/bh-button/bhButton';
-    import BhStepWizard from 'components/bh-step-wizard/bhStepWizard';
-
     export default {
         data () {
             return {
@@ -86,8 +82,7 @@
             isLast () {
                 alert(this.$refs.sw.isLast());
             }
-        },
-        components: {BhButton, BhCard, BhStepWizard}
+        }
     };
 </script>
 

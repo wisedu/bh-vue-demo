@@ -14,9 +14,7 @@
 </template>
 
 <script>
-    import Sys from 'config/sysconf'
-    import EmapCard from 'components/emap-card/emapCard.vue';
-
+    import Sys from 'config/sysconf';
     export default {
         data () {
             return {
@@ -26,7 +24,6 @@
                     template: require('./cardTpl.html')
                 }
             };
-        },
-        components: {EmapCard}
+        }
     };
 </script>

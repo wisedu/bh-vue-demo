@@ -38,11 +38,6 @@
 </template>
 
 <script>
-    import BhCard from 'components/bh-card/bhCard';
-    import BhButton from 'components/bh-button/bhButton';
-    import BhStepFlow from 'components/bh-step-flow/bhStepFlow';
-    import BhFlowNode from 'components/bh-step-flow/bhFlowNode';
-
     export default {
         methods: {
             showAdd () {
@@ -51,8 +46,7 @@
             hideAdd () {
                 this.$refs.sf.hide('5');
             }
-        },
-        components: {BhButton, BhCard, BhStepFlow, BhFlowNode}
+        }
     };
 </script>
 

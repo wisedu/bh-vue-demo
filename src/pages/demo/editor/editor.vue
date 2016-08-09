@@ -32,9 +32,7 @@
 </template>
 
 <script>
-    import Sys from 'config/sysconf'
-    import BhWindow from 'components/bh-window/bhWindow.vue';
-    import EmapEditor from 'components/emap-editor/emapEditor.vue';
+    import Sys from 'config/sysconf';
 
     export default {
         data () {
@@ -66,7 +64,6 @@
             isEmpty () {
                 alert(this.$refs.ee.isEmpty());
             }
-        },
-        components: {EmapEditor, BhWindow}
+        }
     };
 </script>

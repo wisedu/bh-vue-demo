@@ -12,9 +12,6 @@
 </template>
 
 <script>
-    import BhCard from 'components/bh-card/bhCard';
-    import BhNav from 'components/bh-nav/bhNav';
-
     export default {
         data () {
             return {
@@ -65,7 +62,6 @@
             navClick (item) {
                 console.log(item.name + ' selected!');
             }
-        },
-        components: {BhCard, BhNav}
+        }
     };
 </script>

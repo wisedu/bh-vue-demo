@@ -14,11 +14,7 @@
 </template>
 
 <script>
-    import BhCard from 'components/bh-card/bhCard';
-    import EmapAvatarupload from 'components/emap-avatarupload/emapAvatarupload';
-
     export default {
-        components: {BhCard, EmapAvatarupload}
     };
 </script>
 

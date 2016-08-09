@@ -9,8 +9,6 @@
 
 <script>
     import Sys from 'config/sysconf'
-    import EmapDatatable from 'components/emap-datatable/emapDatatable.vue';
-    import EmapForm from 'components/emap-form/emapForm.vue';
     export default {
         data () {
             return {
@@ -96,7 +94,6 @@
                     }
                 });
             }
-        },
-        components: {EmapDatatable, EmapForm}
+        }
     };
 </script>

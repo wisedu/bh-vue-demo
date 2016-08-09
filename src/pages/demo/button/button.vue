@@ -134,20 +134,6 @@
 </template>
 
 <script>
-    import BhButton from 'components/bh-button/bhButton';
-    import BhCard from 'components/bh-card/bhCard';
-    import BhToggle from 'components/bh-toggle/bhToggle';
-    import BhCheckbox from 'components/bh-checkbox/bhCheckbox';
-    import BhChecklist from 'components/bh-checklist/bhChecklist';
-    import BhRadio from 'components/bh-radio/bhRadio';
-    import BhSwitch from 'components/bh-switch/bhSwitch';
-    import BhInput from 'components/bh-input/bhInput';
-    import BhSearch from 'components/bh-search/bhSearch';
-    import BhTextarea from 'components/bh-textarea/bhTextarea';
-    import BhDropdown from 'components/bh-dropdown/bhDropdown';
-    import BhDatetime from 'components/bh-datetime/bhDatetime';
-    import BhFileupload from 'components/bh-fileupload/bhFileupload';
-
     var candidates = ['aaaa', 'abcd', 'alfgh', 'allow', 'basdf', 'boosdf'];
 
     var words = [{name: 'allow', sid: 1}, {name: 'abc', sid: 2}, {name: 'badf', sid: 3}, {name: 'best world', sid: 4}, {name: 'car', sid: 5}, {name: 'choice', sid: 6}];
@@ -298,10 +284,6 @@
             }
         },
         ready () {
-        },
-        components: {
-            BhButton, BhCard, BhToggle, BhCheckbox, BhChecklist, BhRadio, BhSwitch, BhInput, BhSearch, BhTextarea,
-            BhDropdown, BhDatetime, BhFileupload
         }
     };
 </script>

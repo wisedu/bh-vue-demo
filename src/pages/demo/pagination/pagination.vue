@@ -19,9 +19,6 @@
 </template>
 
 <script>
-    import BhCard from 'components/bh-card/bhCard';
-    import BhPagination from 'components/bh-pagination/bhPagination';
-
     export default {
         data () {
             return {
@@ -38,8 +35,7 @@
             setTotal () {
                 this.pager.total = 100;
             }
-        },
-        components: {BhCard, BhPagination}
+        }
     };
 </script>
 

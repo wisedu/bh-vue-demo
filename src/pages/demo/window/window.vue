@@ -31,10 +31,6 @@
 </template>
 
 <script>
-    import BhCard from 'components/bh-card/bhCard';
-    import BhDatatable from 'components/bh-datatable/bhDatatable';
-    import BhWindow from 'components/bh-window/bhWindow';
-
     export default {
         data () {
             return {
@@ -93,7 +89,6 @@
                 }
             };
         },
-        components: {BhCard, BhWindow, BhDatatable},
         methods: {
             open () {
                 this.remoteAddr = 'http://www.baidu.com';

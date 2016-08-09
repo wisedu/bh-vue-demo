@@ -21,9 +21,6 @@
 </template>
 
 <script>
-    import BhSearch from 'components/bh-search/bhSearch';
-    import BhDatatable from 'components/bh-datatable/bhDatatable';
-
     export default {
         data () {
             return {
@@ -80,7 +77,6 @@
             search () {
                 this.$refs.dt1.render();
             }
-        },
-        components: {BhDatatable, BhSearch}
+        }
     };
 </script>

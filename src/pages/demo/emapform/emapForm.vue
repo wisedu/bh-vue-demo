@@ -19,8 +19,6 @@
 
 <script>
     import Sys from 'config/sysconf';
-    import BhButton from 'components/bh-button/bhButton';
-    import EmapForm from 'components/emap-form/emapForm.vue';
 
     export default {
         data () {
@@ -49,7 +47,6 @@
         },
         beforeCompile () {
             this.container = this.$el;
-        },
-        components: {BhButton, EmapForm}
+        }
     };
 </script>

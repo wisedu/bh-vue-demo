@@ -16,9 +16,7 @@
 </template>
 
 <script>
-    import Sys from 'config/sysconf'
-    import BhCard from 'components/bh-card/bhCard';
-    import EmapSearch from 'components/emap-search/emapSearch';
+    import Sys from 'config/sysconf';
 
     export default {
         data () {
@@ -30,8 +28,7 @@
             search (params) {
                 console.log(params);
             }
-        },
-        components: {BhCard, EmapSearch}
+        }
     };
 </script>
 

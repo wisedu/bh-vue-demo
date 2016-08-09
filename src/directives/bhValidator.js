@@ -1,5 +1,3 @@
-import Vue from 'vue';
-
 Vue.directive('bh-validate', {
     bind: function () {
         // 准备工作

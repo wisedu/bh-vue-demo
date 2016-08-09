@@ -51,9 +51,6 @@
 </template>
 
 <script>
-    import BhCard from 'components/bh-card/bhCard';
-    import BhDropdown from 'components/bh-dropdown/bhDropdown';
-
     var words = [
         {slabel: 'allow', value: 1}, {slabel: 'abc', value: 2}, {slabel: 'badf', value: 3},
         {slabel: 'best world', value: 4}, {slabel: 'car', value: 5}, {slabel: 'choice', value: 6}
@@ -91,9 +88,6 @@
             resetDrop2 () {
                 this.$refs.dd2.reset();
             }
-        },
-        components: {
-            BhCard, BhDropdown
         }
     };
 </script>

@@ -42,9 +42,6 @@
 </template>
 
 <script>
-    import BhCard from 'components/bh-card/bhCard';
-    import BhTooltip from 'components/bh-tooltip/bhTooltip';
-
     export default {
         data () {
             return {
@@ -53,8 +50,7 @@
         },
         ready () {
             this.target = this.$els.tt1;
-        },
-        components: {BhCard, BhTooltip}
+        }
     };
 </script>
 

@@ -54,10 +54,6 @@
 </template>
 
 <script>
-    import BhCard from 'components/bh-card/bhCard';
-    import BhWindow from 'components/bh-window/bhWindow';
-    import BhChoose from 'components/bh-choose/bhChoose';
-
     export default {
         data () {
             return {
@@ -225,8 +221,7 @@
             showRemote () {
                 this._instance2.show();
             }
-        },
-        components: {BhCard, BhChoose, BhWindow}
+        }
     };
 </script>
 

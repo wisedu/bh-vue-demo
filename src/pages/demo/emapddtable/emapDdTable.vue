@@ -15,8 +15,7 @@
 </template>
 
 <script>
-    import Sys from 'config/sysconf'
-    import EmapDdTable from 'components/emap-dd-table/emapDdTable.vue';
+    import Sys from 'config/sysconf';
 
     export default {
         data () {
@@ -30,7 +29,6 @@
             getVal () {
                 console.log(this.$refs.ddt.getValue());
             }
-        },
-        components: {EmapDdTable}
+        }
     };
 </script>

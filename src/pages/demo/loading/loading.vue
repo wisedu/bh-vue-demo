@@ -20,9 +20,6 @@
 </template>
 
 <script>
-    import BhCard from 'components/bh-card/bhCard';
-    import BhLoading from 'components/bh-loading/bhLoading';
-
     export default {
         data () {
             return {
@@ -38,8 +35,7 @@
             close () {
                 this.loading.open = false;
             }
-        },
-        components: {BhCard, BhLoading}
+        }
     };
 </script>
 

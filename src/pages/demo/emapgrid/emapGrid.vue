@@ -15,7 +15,6 @@
 
 <script>
     import Sys from 'config/sysconf'
-    import EmapGrid from 'components/emap-grid/emapGrid.vue';
 
     var getCustomColumns = () => {
         var customColumns = [{
@@ -49,7 +48,6 @@
                     method: 'GET'
                 }
             };
-        },
-        components: {EmapGrid}
+        }
     };
 </script>

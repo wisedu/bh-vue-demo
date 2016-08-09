@@ -1,5 +1,3 @@
-import Vue from 'vue';
-
 var VueRouter = require('vue-router');
 Vue.use(VueRouter);
 

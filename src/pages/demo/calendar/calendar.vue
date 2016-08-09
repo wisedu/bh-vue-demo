@@ -47,10 +47,6 @@
 </template>
 
 <script>
-    import BhCard from 'components/bh-card/bhCard';
-    import Calendar from 'components/calendar/calendar';
-    import BhDatetime from 'components/bh-datetime/bhDatetime';
-    import BhInput from 'components/bh-input/bhInput';
 
     var _id = 1000;
 
@@ -118,8 +114,7 @@
                 }
                 this.reset();
             }
-        },
-        components: {BhCard, Calendar, BhDatetime, BhInput}
+        }
     };
 </script>
 

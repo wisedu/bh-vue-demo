@@ -23,9 +23,6 @@ require('directives/bhValidator');
 require('directives/bhToolTip');
 require('filters/dateFilter');
 
-import BhHeader from 'components/bh-header/bhHeader';
-import BhFooter from 'components/bh-footer/bhFooter';
-
 import store from 'vx/store';
 import {fetchMenus} from 'vx/action';
 import {menuList} from 'vx/getters';
@@ -73,7 +70,6 @@ export default {
     ready () {
         this.fetchMenus();
         console.log('setContentMinHeight');
-    },
-    components: {BhHeader, BhFooter}
+    }
 };
 </script>

@@ -35,16 +35,12 @@
 </template>
 
 <script>
-    import BhButton from 'components/bh-button/bhButton';
-    import BhPanel from 'components/bh-panel/bhPanel';
-
     export default {
         data () {
             return {
             };
         },
-        methods: {},
-        components: {BhButton, BhPanel}
+        methods: {}
     };
 </script>
 

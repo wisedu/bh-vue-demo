@@ -1,5 +1,3 @@
-import Vue from 'vue';
-
 Vue.directive('bh-tooltip', function (val) {
     var el = $(this.el);
     // {content: this.expression, autoHide: autoHide, position:direction}

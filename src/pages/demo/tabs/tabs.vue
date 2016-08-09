@@ -73,9 +73,6 @@
 </template>
 
 <script>
-    import BhCard from 'components/bh-card/bhCard';
-    import BhTabs from 'components/bh-tabs/bhTabs';
-
     export default {
         methods: {
             selectTab (index) {
@@ -84,8 +81,7 @@
             unselectTab (index) {
                 console.log('unselected tab: ' + index);
             }
-        },
-        components: {BhCard, BhTabs}
+        }
     };
 </script>
 

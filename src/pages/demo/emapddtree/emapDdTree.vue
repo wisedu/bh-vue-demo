@@ -23,8 +23,7 @@
 </template>
 
 <script>
-    import Sys from 'config/sysconf'
-    import EmapDdTree from 'components/emap-dd-tree/emapDdTree.vue';
+    import Sys from 'config/sysconf';
 
     export default {
         data () {
@@ -59,7 +58,6 @@
             setValue () {
                 this.$refs.ddt2.setValue(['000010', '党群组织/工会']);
             }
-        },
-        components: {EmapDdTree}
+        }
     };
 </script>
