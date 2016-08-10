@@ -5,8 +5,11 @@
                 <h2>Tab控件</h2>
             </header>
             <div class="bh-mv-8 bh-mb-16">
+                <div class='bh-mv-8'>
+                    <bh-button @click='toFirst'>切换到第一个</bh-button>
+                </div>
                 <bh-card class='content bh-p-8'>
-                    <bh-tabs @selected='selectTab' @unselected='unselectTab'>
+                    <bh-tabs v-ref:bt1 @selected='selectTab' @unselected='unselectTab'>
                         <ul>
                             <li>Node.js</li>
                             <li>JavaServer Pages</li>
@@ -80,6 +83,9 @@
             },
             unselectTab (index) {
                 console.log('unselected tab: ' + index);
+            },
+            toFirst () {
+                this.$refs.bt1.selectTab(1);
             }
         }
     };
