@@ -10,7 +10,7 @@
                     <bh-button @click='read' type='primary' class='bh-mb-16'>只读</bh-button>
                     <bh-button @click='validate' type='primary' class='bh-mb-16'>校验</bh-button>
                     <div class='clearfix'></div>
-                    <emap-form class='bh-col-md-8' v-ref:ef :options='options' :container='container'></emap-form>
+                    <emap-form class='bh-col-md-8' v-el:ef v-ref:ef :options='options' :container='container' @inited='formInited'></emap-form>
                 </div>
             </div>
         </section>
@@ -45,6 +45,17 @@
             read () {
                 this.options.model = 'v';
                 this.options.readonly = true;
+            },
+            formInited () {
+                var input = $(this.$els.ef).find('[data-name=schoolCode]');
+                var label = input.parent().prev('label');
+                label.css({
+                    background: '#900',
+                    color: '#fff'
+                });
+                input.next('i').removeClass('icon-edit').addClass('icon-lock');
+                this.$refs.ef.disableItem(['schoolCode']);
+                input.parent().jqxTooltip({content: label.html(), position: 'bottom'});
             }
         },
         beforeCompile () {

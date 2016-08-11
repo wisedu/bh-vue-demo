@@ -107,6 +107,10 @@ export const fetchMenus = function ({ dispatch, state }) {
                 'icon': 'iconfont icon-settings',
                 'href': '#!/tooltip'
             }, {
+                'text': '气泡弹窗',
+                'icon': 'iconfont icon-settings',
+                'href': '#!/popover'
+            }, {
                 'text': '模态对话框',
                 'icon': 'iconfont icon-settings',
                 'href': '#!/window'

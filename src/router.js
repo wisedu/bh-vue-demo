@@ -117,6 +117,11 @@ router.map({
             require(['pages/demo/loading/loading'], resolve);
         }
     },
+    '/popover': {
+        component: (resolve) => {
+            require(['pages/demo/popover/popover'], resolve);
+        }
+    },
     '/tooltip': {
         component: (resolve) => {
             require(['pages/demo/tooltip/tooltip'], resolve);
