@@ -1,9 +1,6 @@
-import Vue from 'vue';
 import App from './App';
-import router from './router';
-
-var VueRouter = require('vue-router');
-Vue.use(VueRouter);
+import routes from 'config/routes';
+import router from 'src/router';
 
 var resetWinSize = () => {
     BH_UTILS.setContentMinHeight($('main'), 'noHeader', 44);
@@ -12,24 +9,19 @@ var resetWinSize = () => {
 
 $(window).resize(resetWinSize);
 
-router.beforeEach((transition) => {
-    // $('#cloudIframe').remove();
-    $.bhPaperPileDialog.hide();
-    $('.jqx-window').each(function () {
-        $(this).jqxWindow('destroy');
-    });
-    transition.next();
-    // var data = UserService.getLoginUserSync();
-    // if ('success' == data.result) {
-    //     transition.next();
-    // } else {
-    //     transition.abort();
-    //     Util.redirectLogin();
-    // }
+router.init(routes, {
+    beforeEach (transition) {
+        $.bhPaperPileDialog.hide();
+        $('.jqx-window').each(function () {
+            $(this).jqxWindow('destroy');
+        });
+        transition.next();
+    },
+    afterEach (transition) {
+        resetWinSize();
+    }
 });
 
-router.afterEach((transition) => {
-    resetWinSize();
-});
+window.__vue_router = router;
 
 router.start(App, '#app');

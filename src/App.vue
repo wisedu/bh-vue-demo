@@ -48,7 +48,7 @@ export default {
                 'title': 'API文档', // 菜单名
                 'hide': false, // 将该项菜单隐藏
                 'active': false,  // 该标题为选中状态，必须有一个菜单的该属性是true
-                'href': 'http://res.wisedu.com/FE/vue-doc/', // 可选，给该菜单添加链接
+                'href': 'http://res.wisedu.com/FS/vue-doc/', // 可选，给该菜单添加链接
                 'isOpenNewPage': true // 可选，该菜单是否要在新窗口打开，只有在配置了href才有效
             }],
             'userInfo': {
