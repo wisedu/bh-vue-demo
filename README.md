@@ -1,5 +1,7 @@
 # bh-vue 组件库Demo
 
+此分支演示将bh-vue打包到min.js文件使用，并支持动态载入第三方开发的widget app。
+
 > [bh-vue](https://www.npmjs.com/package/bh-vue)组件库的演示工程
 
 > 演示地址 [https://wisedu.github.io/bh-vue-demo](https://wisedu.github.io/bh-vue-demo)
