@@ -41,7 +41,7 @@
     import BhCard from 'components/bh-card/bhCard';
     import BhButton from 'components/bh-button/bhButton';
     import BhStepFlow from 'components/bh-step-flow/bhStepFlow';
-    import BhFlowNode from 'components/bh-step-flow/bhFlowNode';
+    import BhFlowNode from 'components/bh-flow-node/bhFlowNode';
 
     export default {
         methods: {

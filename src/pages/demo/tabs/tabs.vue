@@ -6,7 +6,12 @@
             </header>
             <div class="bh-mv-8 bh-mb-16">
                 <bh-card class='content bh-p-8'>
-                    <bh-tabs @selected='selectTab' @unselected='unselectTab'>
+                    <div class='bh-mb-8'>
+                        <bh-button @click='first'>选择第一个</bh-button>
+                        <bh-button @click='add'>增加</bh-button>
+                        <bh-button @click='del'>删除</bh-button>
+                    </div>
+                    <bh-tabs v-ref:bt1 @selected='selectTab' @unselected='unselectTab'>
                         <ul>
                             <li>Node.js</li>
                             <li>JavaServer Pages</li>
@@ -73,11 +78,21 @@
 </template>
 
 <script>
+    import BhButton from 'components/bh-button/bhButton';
     import BhCard from 'components/bh-card/bhCard';
     import BhTabs from 'components/bh-tabs/bhTabs';
 
     export default {
         methods: {
+            first () {
+                this.$refs.bt1.select(0);
+            },
+            add () {
+                this.$refs.bt1.add(2, '新建', '<p>新建空白页</p>');
+            },
+            del () {
+                this.$refs.bt1.remove(2);
+            },
             selectTab (index) {
                 console.log('selected tab: ' + index);
             },
@@ -85,7 +100,7 @@
                 console.log('unselected tab: ' + index);
             }
         },
-        components: {BhCard, BhTabs}
+        components: {BhButton, BhCard, BhTabs}
     };
 </script>
 
