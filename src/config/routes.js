@@ -16,6 +16,11 @@ export default {
             }
         }
     },
+    '/plugin/:id': {
+        component: (resolve) => {
+            require(['pages/plugin/plugin'], resolve);
+        }
+    },
     // '/plugin/:id': {
     //     component: (resolve) => {
     //         require(['pages/plugin/plugin'], resolve);

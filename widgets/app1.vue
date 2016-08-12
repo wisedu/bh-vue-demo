@@ -4,8 +4,8 @@
         <div>{{msg}}</div>
         <bh-button>这是一个按钮组件</bh-button>
         <div>
-            <a v-link='"/wrapper/plugin/1/a"'>A页面</a>
-            <a v-link='"/wrapper/plugin/1/b"'>B页面</a>
+            <a v-link='contextPath + "/a"'>A页面</a>
+            <a v-link='contextPath + "/b"'>B页面</a>
         </div>
         <hr class='bh-v-8'>
         <router-view></router-view>
@@ -19,6 +19,7 @@
     var B = require('./b');
 
     export default {
+        props: ['contextPath'],
         data () {
             return {
                 title: 'APP ONE',

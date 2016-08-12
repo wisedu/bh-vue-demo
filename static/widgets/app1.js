@@ -414,6 +414,7 @@
 	var B = __webpack_require__(15);
 
 	exports.default = {
+	    props: ['contextPath'],
 	    data: function data() {
 	        return {
 	            title: 'APP ONE',
@@ -429,6 +430,7 @@
 	        };
 	    },
 	    activate: function activate(done) {
+	        console.log(this.contextPath);
 	        this.$dispatch('widget-active', this.routes);
 	        done();
 	    },
@@ -649,7 +651,7 @@
 /* 18 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div id=\"widget-app1\" _v-5abf3cb2=\"\">\n    <p _v-5abf3cb2=\"\">{{title}}</p>\n    <div _v-5abf3cb2=\"\">{{msg}}</div>\n    <bh-button _v-5abf3cb2=\"\">这是一个按钮组件</bh-button>\n    <div _v-5abf3cb2=\"\">\n        <a v-link=\"&quot;/wrapper/plugin/1/a&quot;\" _v-5abf3cb2=\"\">A页面</a>\n        <a v-link=\"&quot;/wrapper/plugin/1/b&quot;\" _v-5abf3cb2=\"\">B页面</a>\n    </div>\n    <hr class=\"bh-v-8\" _v-5abf3cb2=\"\">\n    <router-view _v-5abf3cb2=\"\"></router-view>\n</div>\n";
+	module.exports = "\n<div id=\"widget-app1\" _v-5abf3cb2=\"\">\n    <p _v-5abf3cb2=\"\">{{title}}</p>\n    <div _v-5abf3cb2=\"\">{{msg}}</div>\n    <bh-button _v-5abf3cb2=\"\">这是一个按钮组件</bh-button>\n    <div _v-5abf3cb2=\"\">\n        <a v-link=\"contextPath + &quot;/a&quot;\" _v-5abf3cb2=\"\">A页面</a>\n        <a v-link=\"contextPath + &quot;/b&quot;\" _v-5abf3cb2=\"\">B页面</a>\n    </div>\n    <hr class=\"bh-v-8\" _v-5abf3cb2=\"\">\n    <router-view _v-5abf3cb2=\"\"></router-view>\n</div>\n";
 
 /***/ }
 /******/ ]);

@@ -42,7 +42,14 @@ export default {
                 'hide': false, // 将该项菜单隐藏
                 'active': true,  // 该标题为选中状态，必须有一个菜单的该属性是true
                 'className': 'firstFlag',  // 可选，给该菜单名添加样式类
-                'href': '/', // 可选，给该菜单添加链接
+                'href': '#!/', // 可选，给该菜单添加链接
+                'isOpenNewPage': false // 可选，该菜单是否要在新窗口打开，只有在配置了href才有效
+            }, {
+                'title': '第三方应用', // 菜单名
+                'hide': false, // 将该项菜单隐藏
+                'active': false,  // 该标题为选中状态，必须有一个菜单的该属性是true
+                'className': 'secondFlag',  // 可选，给该菜单名添加样式类
+                'href': '#!/wrapper', // 可选，给该菜单添加链接
                 'isOpenNewPage': false // 可选，该菜单是否要在新窗口打开，只有在配置了href才有效
             }, {
                 'title': 'API文档', // 菜单名

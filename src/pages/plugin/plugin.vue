@@ -1,6 +1,6 @@
 <template>
     <div>
-        <component :is='app' @widget-active='widgetActive'></component>
+        <component :is='app' :context-path='path' @widget-active='widgetActive'></component>
     </div>
 </template>
 
@@ -54,6 +54,8 @@
     export default {
         data () {
             return {
+                fullPath: '',
+                path: '',
                 app: null
             };
         },
@@ -78,8 +80,15 @@
             }
         },
         route: {
+            activate (transition) {
+                var matched = transition.to.matched;
+                this.fullPath = matched[matched.length - 1].handler.fullPath;
+                transition.next();
+            },
             data (transition) {
-                var name = 'app' + transition.to.params.id;
+                var appId = transition.to.params.id;
+                var name = 'app' + appId;
+                this.path = this.fullPath.replace(':id', appId);
                 _loadWidget(this, name).done(() => {
                     transition.next();
                 });
