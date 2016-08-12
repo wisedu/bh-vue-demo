@@ -1,0 +1,1 @@
+var req = require.context("../", true, /^\.\/.*\.jade$/);
