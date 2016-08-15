@@ -31,7 +31,7 @@
 
 <style scoped lang='less'>
     .applist {
-        min-height: 100px;
+        min-height: 10px;
         .app {
             min-height: 80px;
             display: inline-block;

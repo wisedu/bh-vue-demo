@@ -1,5 +1,5 @@
 <template>
-    <div id='widget-app2'>
+    <div id='widget-app2' class='bh-p-8'>
         <p>{{title}}</p>
         <div>{{msg}}</div>
     </div>
@@ -18,7 +18,6 @@
 
 <style scoped>
     #widget-app2 {
-        padding: 8px;
         background-color: #eee;
     }
 </style>

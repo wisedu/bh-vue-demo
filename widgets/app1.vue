@@ -1,5 +1,5 @@
 <template>
-    <div id='widget-app1'>
+    <div id='widget-app1' class='bh-p-8'>
         <p>{{title}}</p>
         <div>{{msg}}</div>
         <bh-button>这是一个按钮组件</bh-button>
@@ -44,7 +44,6 @@
 
 <style scoped>
     #widget-app1 {
-        padding: 8px;
         background-color: #eee;
     }
 </style>
