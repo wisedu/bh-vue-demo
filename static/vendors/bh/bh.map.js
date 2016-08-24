@@ -1055,7 +1055,7 @@
         },
 
         /**
-         * *初始化selectedRecords 
+         * *初始化selectedRecords
          * @param  {[type]} data [description]
          * @return {[type]}      [description]
          */
@@ -4389,7 +4389,7 @@
     var Plugin;
 
     /**
-     * 这里是一个自运行的单例模式。 
+     * 这里是一个自运行的单例模式。
      */
     Plugin = (function() {
 
@@ -5425,7 +5425,7 @@
         if ($dialog.length > 0) {
             setTimeout(function() {
                 $.bhPaperPileDialog.resetPageFooter(); //改变页面的页脚位置
-                $.bhPaperPileDialog.resetDialogFooter(); //改变弹框的页脚位置    
+                $.bhPaperPileDialog.resetDialogFooter(); //改变弹框的页脚位置
             }, 1000);
         }
     }
@@ -8167,7 +8167,7 @@
             var startTime = initTime; // 记录动画开始时间
             var hoverTime; //记录鼠标移入时间
             var leaveTime; // 记录鼠标移出时间
-            var remainTime; //记录鼠标移出后，剩余停留时间    
+            var remainTime; //记录鼠标移出后，剩余停留时间
             obj.off('mouseenter').on("mouseenter", function() {
                 obj.prop('leaving', false); // 记录鼠标移入移出的状态
                 hoverTime = +(new Date()); // 定义变量记录鼠标移入的时间
@@ -8238,7 +8238,7 @@
             var contentObj = obj.find(".bh-tip-content");
             var cardObj = obj.find(".bh-card");
             var objText = $.trim(contentObj.text()); //获得字符串内容
-            var textLen = objText.length; //实际字符个数    
+            var textLen = objText.length; //实际字符个数
             var textWidth = textLen * 12 + 16 + 8; // 计算内容实际宽度：字符个数*每个字符宽度 + 图标宽 + 图标与文字的间距
             if (textWidth > 184) { // 184: 最小宽度240px下内容的最大宽度
                 cardObj.css({

@@ -40,7 +40,7 @@
             return dfd.promise();
         }
 
-        var widgetUrl = '/widgets/' + widgetName + '.js';
+        var widgetUrl = '/apps/' + widgetName + '.js';
         _loadScript(widgetUrl, () => {
             // console.log(widgetName + ' loaded');
             vm.app = widgetName;
@@ -87,7 +87,7 @@
             },
             data (transition) {
                 var appId = transition.to.params.id;
-                var name = 'app' + appId;
+                var name = appId;
                 this.path = this.fullPath.replace(':id', appId);
                 _loadWidget(this, name).done(() => {
                     transition.next();

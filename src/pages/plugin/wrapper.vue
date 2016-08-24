@@ -18,7 +18,7 @@
             return {
                 appList: [{
                     name: '应用1',
-                    id: '1'
+                    id: 'hello'
                 }, {
                     name: '应用2',
                     id: '2'

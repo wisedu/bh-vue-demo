@@ -2,15 +2,17 @@
     <article bh-layout-role="single">
         <h2>表格控件</h2>
         <section>
+            <bh-button @click='init' class='bh-mv-16'>初始化</bh-button>
             <emap-datatable v-ref:dt1 :options='options' @edit='edit' @del='del'></emap-datatable>
         </section>
     </article>
 </template>
 
 <script>
-    import Sys from 'config/sysconf'
+    import Sys from 'config/sysconf';
     import EmapDatatable from 'components/emap-datatable/emapDatatable.vue';
     import EmapForm from 'components/emap-form/emapForm.vue';
+    import BhButton from 'components/bh-button/bhButton.vue';
     export default {
         data () {
             return {
@@ -20,6 +22,7 @@
                     method: 'GET',
                     action: 'feedback_list',
                     selectionMode: 'singleRow',
+                    lazyInit: true,
                     params: {
                         a: 111,
                         b: 233
@@ -57,6 +60,9 @@
             };
         },
         methods: {
+            init () {
+                this.$refs.dt1.init();
+            },
             edit (row) {
                 var vm = this;
                 console.log('edit', row);
@@ -97,6 +103,6 @@
                 });
             }
         },
-        components: {EmapDatatable, EmapForm}
+        components: {EmapDatatable, EmapForm, BhButton}
     };
 </script>
