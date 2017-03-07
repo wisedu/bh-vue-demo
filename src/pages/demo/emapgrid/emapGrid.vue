@@ -14,7 +14,7 @@
 </template>
 
 <script>
-    import Sys from 'config/sysconf'
+    import Sys from 'config/sysconf';
     import EmapGrid from 'components/emap-grid/emapGrid.vue';
 
     var getCustomColumns = () => {
@@ -41,12 +41,39 @@
         data () {
             return {
                 options: {
-                    pagePath: Sys.contextPath + 'mock/emap/major-model.json',
-                    action: 'TABLE',
-                    template: require('./cardTpl.html'),
-                    customColumns: getCustomColumns(),
-                    sortable: true,
-                    method: 'GET'
+                    pagePath: Sys.contextPath + 'mock/emap/campus-meta.json',
+                    method: 'GET',
+                    action: 'feedback_list',
+                    selectionMode: 'singleRow',
+                    // lazyInit: true,
+                    params: {
+                        a: 111,
+                        b: 233
+                    },
+                    customColumns: [
+                        {
+                            type: 'tpl',
+                            colField: 'submitTime',
+                            column: {
+                                cellsRenderer (row, column, value, rowData) {
+                                    return new Date(rowData.submitTime).toLocaleString();
+                                }
+                            }
+                        }
+                    ],
+                    operations: {
+                        title: '操作',
+                        width: 100,
+                        items: [{
+                            title: '编辑',
+                            name: 'edit',
+                            type: 'link'
+                        }, {
+                            title: '删除',
+                            name: 'del',
+                            type: 'link'
+                        }]
+                    }
                 }
             };
         },

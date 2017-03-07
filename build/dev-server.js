@@ -9,7 +9,7 @@ var webpackConfig = process.env.NODE_ENV === 'testing'
 
 // var tb = require('theme-build');
 // tb('../src/src/less/', '../static/resources/themes/');
-require('./theme.js');
+// require('./theme.js');
 
 webpackConfig.output.publicPath = config.dev.assetsPublicPath;
 

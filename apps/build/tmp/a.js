@@ -1,0 +1,1 @@
+(function(SVue){SVue.component("demoa", require("../../hello/a.vue"))})(Vue);

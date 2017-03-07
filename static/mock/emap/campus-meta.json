@@ -3,7 +3,6 @@
         "name": "feedback_list",
         "appName": "",
         "modelName": "获取意见反馈列表",
-        "url": "./mock/emap/campus-data.json",
         "controls": [{
             "name": "tenantId",
             "dataType": "string",

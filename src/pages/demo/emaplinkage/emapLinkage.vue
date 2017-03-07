@@ -20,14 +20,7 @@
         data () {
             return {
                 options: {
-                    data: [],
-                    storeId: 'image',
-                    contextPath: '/mock',
-                    defaultAvatar: '../u20.png',
-                    ratio: 1,
-                    width: 100,
-                    type: ['jpg', 'png', 'gif'],
-                    size: 5120
+
                 }
             };
         },

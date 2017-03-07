@@ -13,7 +13,7 @@
                     <button class='bh-btn bh-btn-primary' @click='getCurrent'>获取选中行(鼠标点击)</button>
                 </div>
                 <div class="bh-col-md-12 bh-mv-8 bh-mb-16">
-                    <bh-datatable pager-mode='default' root='a1' :show-header='true' v-ref:dt1 :columns='columns' :pageable='true' :selected-rows.sync='selectedRows' :checked-rows.sync='checkedRows' :checkable='true' url='./mock/datatable.json' :query-params='queryParams' :operations='operations' @edit='edit' @del='del' :callbacks='callbacks' @row-select='rowSelect'></bh-datatable>
+                    <bh-datatable pager-mode='default' :options='options' :show-header='true' v-ref:dt1 :pageable='true' :selected-rows.sync='selectedRows' :checked-rows.sync='checkedRows' :checkable='true' url='./mock/datatable.json' :query-params='queryParams' @edit='edit' @del='del' :callbacks='callbacks' @row-select='rowSelect'></bh-datatable>
                 </div>
             </div>
         </section>
@@ -29,30 +29,38 @@
             return {
                 selectedRows: [],
                 checkedRows: [],
-                columns: [
-                    {text: 'Name', dataField: 'name', width: 300},
-                    {text: 'Beverage Type', dataField: 'type', width: 300},
-                    {text: 'Calories', dataField: 'calories', width: 180, cellsRenderer: function (row, column, value, rowData) {
-                        return value + 'g';
-                    }},
-                    {text: 'Total Fat', dataField: 'totalfat', width: 120},
-                    {text: 'Protein', dataField: 'protein'}
-                ],
+                options: {
+                    root: 'a1',
+                    showHeader: false, // 此处参数会覆盖标签上的 :show-header='true'
+                    columns: [
+                        {text: 'Name', dataField: 'name', width: 300},
+                        {text: 'Beverage Type', dataField: 'type', width: 300},
+                        {text: 'Calories', dataField: 'calories', width: 180, cellsRenderer: function (row, column, value, rowData) {
+                            return value + 'g';
+                        }},
+                        {text: 'Total Fat', dataField: 'totalfat', width: 120},
+                        {text: 'Protein', dataField: 'protein'}
+                    ],
+                    operations: {
+                        title: '操作',
+                        width: 100,
+                        items: [{
+                            title: '编辑',
+                            name: 'edit',
+                            type: 'link'
+                        }, {
+                            title: '删除',
+                            name: 'del',
+                            type: 'link'
+                        }]
+                    },
+                    rowDetails: true,
+                    initRowDetails: function(id, dataRow, element, rowInfo) {
+                        element.append('<p>测试detail</p>');
+                    }
+                },
                 queryParams: {
                     keyword: 'aaa'
-                },
-                operations: {
-                    title: '操作',
-                    width: 100,
-                    items: [{
-                        title: '编辑',
-                        name: 'edit',
-                        type: 'link'
-                    }, {
-                        title: '删除',
-                        name: 'del',
-                        type: 'link'
-                    }]
                 },
                 callbacks: {
                     downloadComplete (data) {

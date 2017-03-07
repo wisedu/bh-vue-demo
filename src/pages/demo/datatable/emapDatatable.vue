@@ -3,6 +3,8 @@
         <h2>表格控件</h2>
         <section>
             <bh-button @click='init' class='bh-mv-16'>初始化</bh-button>
+            <bh-button @click='importFile' class='bh-mv-16'>导入</bh-button>
+            <bh-button @click='getFirstRow' class='bh-mv-16'>获取第一行数据</bh-button>
             <emap-datatable v-ref:dt1 :options='options' @edit='edit' @del='del'></emap-datatable>
         </section>
     </article>
@@ -19,13 +21,13 @@
                 options: {
                     // pagePath: 'http://localhost:3000/mock/emap/major-model.json',
                     pagePath: Sys.contextPath + 'mock/emap/campus-meta.json',
-                    method: 'GET',
+                    // method: 'post',
+                    url: 'mock/emap/campus-data.json',
                     action: 'feedback_list',
                     selectionMode: 'singleRow',
-                    lazyInit: true,
+                    // lazyInit: true,
                     params: {
-                        a: 111,
-                        b: 233
+                        a: ''
                     },
                     customColumns: [
                         {
@@ -63,6 +65,9 @@
             init () {
                 this.$refs.dt1.init();
             },
+            getFirstRow () {
+                console.log(this.$refs.dt1.getDataByRow(0));
+            },
             edit (row) {
                 var vm = this;
                 console.log('edit', row);
@@ -79,7 +84,6 @@
                         vm.$compile($section[0]); // 重新扫描
 
                         $('.data-edit-save', $footer).on('click', () => {
-
                             console.log('save form: ', $section.emapForm('getValue'));
                         });
 
@@ -100,6 +104,17 @@
                             content: '删除失败'
                         });
                     }
+                });
+            },
+            importFile () {
+                // let host = 'http://172.20.6.12:8080';
+
+                $.emapImport({
+                    adapter: 'EMAP_IMPORT_DIRECT',
+                    uploadUrl: '/xsxx/file/uploadTempFile.do',
+                    rownumUrl: '/xsxx/sys/emapcomponent/imexport/importRownum.do', // 导入行号请求 url
+                    fileImportUrl: '/xsxx/sys/emapcomponent/imexport/import.do', // 导入文件请求 url
+                    tplUrl: 'ccc.do' // 下载模板请求 url，view直接下载
                 });
             }
         },

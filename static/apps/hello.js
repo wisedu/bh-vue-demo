@@ -44,21 +44,69 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	Vue.component('hello', __webpack_require__(1));
+	"use strict";
 
+	(function (SVue) {
+	  SVue.component("demohello", __webpack_require__(4));
+	})(Vue);
 
 /***/ },
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(2)
-	__vue_script__ = __webpack_require__(6)
+	__vue_script__ = __webpack_require__(2)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] hello\\hello.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(18)
+	  console.warn("[vue-loader] apps\\hello\\a.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(3)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "E:\\vue\\bh-vue-demo\\apps\\hello\\a.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 2 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {};
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div>\n    这是子页面 A\n</div>\n";
+
+/***/ },
+/* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(5)
+	__vue_script__ = __webpack_require__(9)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] apps\\hello\\hello.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(19)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -77,16 +125,16 @@
 	})()}
 
 /***/ },
-/* 2 */
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(3);
+	var content = __webpack_require__(6);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
+	var update = __webpack_require__(8)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -103,10 +151,10 @@
 	}
 
 /***/ },
-/* 3 */
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(4)();
+	exports = module.exports = __webpack_require__(7)();
 	// imports
 
 
@@ -117,7 +165,7 @@
 
 
 /***/ },
-/* 4 */
+/* 7 */
 /***/ function(module, exports) {
 
 	/*
@@ -173,7 +221,7 @@
 
 
 /***/ },
-/* 5 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -395,7 +443,7 @@
 
 
 /***/ },
-/* 6 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -404,17 +452,20 @@
 	    value: true
 	});
 
-	var _bhButton = __webpack_require__(7);
+	var _widgetBase = __webpack_require__(10);
+
+	var _widgetBase2 = _interopRequireDefault(_widgetBase);
+
+	var _bhButton = __webpack_require__(11);
 
 	var _bhButton2 = _interopRequireDefault(_bhButton);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var A = __webpack_require__(12);
-	var B = __webpack_require__(15);
+	var A = __webpack_require__(1);
+	var B = __webpack_require__(16);
 
 	exports.default = {
-	    props: ['contextPath'],
 	    data: function data() {
 	        return {
 	            title: 'APP ONE',
@@ -429,26 +480,46 @@
 	            }
 	        };
 	    },
-	    activate: function activate(done) {
-	        this.$dispatch('widget-active', this.routes);
-	        done();
-	    },
 
-	    components: { BhButton: _bhButton2.default }
+	    components: { BhButton: _bhButton2.default },
+	    mixins: [_widgetBase2.default]
 	};
 
 /***/ },
-/* 7 */
+/* 10 */
+/***/ function(module, exports) {
+
+	module.exports = {
+	    props: ['contextPath'],
+	    data () {
+	        return {
+	            routes: {}
+	        };
+	    },
+	    methods: {
+	        l (path) {
+	            return (this.contextPath + path).replace(/\/\//g, '/');
+	        }
+	    },
+	    activate (done) {
+	        this.$dispatch('widget-active', this.routes);
+	        done();
+	    }
+	};
+
+
+/***/ },
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(8)
-	__vue_script__ = __webpack_require__(10)
+	__webpack_require__(12)
+	__vue_script__ = __webpack_require__(14)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] ..\\node_modules\\bh-vue\\bh-button\\bhButton.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(11)
+	  console.warn("[vue-loader] node_modules\\bh-vue\\bh-button\\bhButton.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(15)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -467,16 +538,16 @@
 	})()}
 
 /***/ },
-/* 8 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(9);
+	var content = __webpack_require__(13);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
+	var update = __webpack_require__(8)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -493,10 +564,10 @@
 	}
 
 /***/ },
-/* 9 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(4)();
+	exports = module.exports = __webpack_require__(7)();
 	// imports
 
 
@@ -507,7 +578,7 @@
 
 
 /***/ },
-/* 10 */
+/* 14 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -551,67 +622,22 @@
 	};
 
 /***/ },
-/* 11 */
+/* 15 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<button :class=\"classObj\" _v-24c99cd0=\"\">\n    <slot _v-24c99cd0=\"\"></slot><i v-if=\"icon\" class=\"iconfont icon-{{icon}}\" _v-24c99cd0=\"\"></i>\n</button>\n";
 
 /***/ },
-/* 12 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(13)
+	__vue_script__ = __webpack_require__(17)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] hello\\a.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(14)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
-	}
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "E:\\vue\\bh-vue-demo\\apps\\hello\\a.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 13 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.default = {};
-
-/***/ },
-/* 14 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div>\n    这是子页面 A\n</div>\n";
-
-/***/ },
-/* 15 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(16)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] hello\\b.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(17)
+	  console.warn("[vue-loader] apps\\hello\\b.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(18)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -630,7 +656,7 @@
 	})()}
 
 /***/ },
-/* 16 */
+/* 17 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -641,16 +667,16 @@
 	exports.default = {};
 
 /***/ },
-/* 17 */
+/* 18 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div>\n    这是子页面 B\n</div>\n";
 
 /***/ },
-/* 18 */
+/* 19 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div id=\"widget-app1\" class=\"bh-p-8\" _v-8d6a6070=\"\">\n    <p _v-8d6a6070=\"\">{{title}}</p>\n    <div _v-8d6a6070=\"\">{{msg}}</div>\n    <bh-button _v-8d6a6070=\"\">这是一个按钮组件</bh-button>\n    <div _v-8d6a6070=\"\">\n        <a v-link=\"contextPath + &quot;/a&quot;\" _v-8d6a6070=\"\">A页面</a>\n        <a v-link=\"contextPath + &quot;/b&quot;\" _v-8d6a6070=\"\">B页面</a>\n    </div>\n    <hr class=\"bh-v-8\" _v-8d6a6070=\"\">\n    <router-view _v-8d6a6070=\"\"></router-view>\n</div>\n";
+	module.exports = "\n<div id=\"widget-app1\" class=\"bh-p-8\" _v-8d6a6070=\"\">\n    <p _v-8d6a6070=\"\">{{title}}</p>\n    <div _v-8d6a6070=\"\">{{msg}}</div>\n    <bh-button _v-8d6a6070=\"\">这是一个按钮组件</bh-button>\n    <div _v-8d6a6070=\"\">\n        <a v-link=\"l(&quot;/a&quot;)\" _v-8d6a6070=\"\">A页面</a>\n        <a v-link=\"l(&quot;/b&quot;)\" _v-8d6a6070=\"\">B页面</a>\n    </div>\n    <hr class=\"bh-v-8\" _v-8d6a6070=\"\">\n    <router-view _v-8d6a6070=\"\"></router-view>\n</div>\n";
 
 /***/ }
 /******/ ]);

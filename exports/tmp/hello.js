@@ -1,0 +1,1 @@
+(function(SVue){SVue.component("demohello", require("../../apps/hello/hello.vue"))})(Vue);

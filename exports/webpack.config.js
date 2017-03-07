@@ -11,7 +11,7 @@ var alias = widgetsConf.alias;
 var entries = {};
 var includes = [];
 
-var tmpDir = 'tmp';
+var tmpDir = path.resolve(__dirname, 'tmp');
 
 // 删除目录
 var deleteFolderRecursive = function (fpath) {
@@ -39,7 +39,7 @@ fs.mkdirSync(tmpDir);
 // 创建临时入口文件
 var makeEntry = function (pre, entryName, filePath) {
     var compName = pre + entryName;
-    var tmpPath = path.resolve(__dirname, tmpDir, entryName + '.js');
+    var tmpPath = path.resolve(tmpDir, entryName + '.js');
     var content = '(function(SVue){SVue.component("' + compName + '", require("../' + filePath + '"))})(Vue);';
     fs.writeFileSync(tmpPath, content, 'utf-8');
     return tmpPath;
