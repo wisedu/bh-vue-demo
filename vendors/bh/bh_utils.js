@@ -273,7 +273,7 @@
                 if(resp.statusText.indexOf("NetworkError") > -1){
                     BH_UTILS.bhDialogDanger({
                         title: '网络错误',
-                        content:'您可以尝试刷新页面解决该问题', 
+                        content:'您可以尝试刷新页面解决该问题',
                         buttons:[{
                             text: '关闭',
                             className: 'bh-btn-default'
@@ -321,12 +321,12 @@
                     //console.log(result.loginURL);
                     window.location.href = result.loginURL;
                 }*/
-                
+
                 //qiyu 2016-5-26 长时间不操作出现异常，给予提示
                 if(resp.statusText.indexOf("NetworkError") > -1){
                     BH_UTILS.bhDialogDanger({
                         title: '网络错误',
-                        content:'您可以尝试刷新页面解决该问题', 
+                        content:'您可以尝试刷新页面解决该问题',
                         buttons:[{
                             text: '关闭',
                             className: 'bh-btn-default'
@@ -388,7 +388,7 @@
                 if(resp.statusText.indexOf("NetworkError") > -1){
                     BH_UTILS.bhDialogDanger({
                         title: '网络错误',
-                        content:'您可以尝试刷新页面解决该问题', 
+                        content:'您可以尝试刷新页面解决该问题',
                         buttons:[{
                             text: '关闭',
                             className: 'bh-btn-default'
@@ -431,7 +431,7 @@
                 if(resp.statusText.indexOf("NetworkError") > -1){
                     BH_UTILS.bhDialogDanger({
                         title: '网络错误',
-                        content:'您可以尝试刷新页面解决该问题', 
+                        content:'您可以尝试刷新页面解决该问题',
                         buttons:[{
                             text: '关闭',
                             className: 'bh-btn-default'
@@ -459,7 +459,7 @@
 
     /**
      * 同步方式获取html片段
-     * @return {String} 
+     * @return {String}
      */
     BH_UTILS.getHTML = function(url, params) {
         var resp = $.ajax({
@@ -662,10 +662,10 @@
      * {
      *   "logo":"public/images/demo/logo.png",
      *   "title": "校内调动",
-     *   "icons": ["icon-apps"], 
+     *   "icons": ["icon-apps"],
      *   "userImage": "public/images/demo/user1.png",
      *   "nav":[
-     *       {"title":"校内调动", "className": "sc-transfer", "active":true}, 
+     *       {"title":"校内调动", "className": "sc-transfer", "active":true},
      *       {"title":"调动历史", "className": "his-transfer"}
      *   ]
      * };
@@ -775,10 +775,10 @@
 
     //处理键盘事件 禁止后退键（Backspace）密码或单行、多行文本框除外
     BH_UTILS.banBackSpace = function(e) {
-        var ev = e || window.event; //获取event对象   
-        var obj = ev.target || ev.srcElement; //获取事件源   
+        var ev = e || window.event; //获取event对象
+        var obj = ev.target || ev.srcElement; //获取事件源
 
-        var t = obj.type || obj.getAttribute('type'); //获取事件源类型  
+        var t = obj.type || obj.getAttribute('type'); //获取事件源类型
 
         //获取作为判断条件的事件类型
         var vReadOnly = obj.getAttribute('readonly');

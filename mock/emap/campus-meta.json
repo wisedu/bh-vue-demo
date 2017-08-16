@@ -1,9 +1,9 @@
 {
     "models": [{
         "name": "feedback_list",
+        "url": "http://172.16.7.75:8000/bh-vue/grid/data",
         "appName": "",
         "modelName": "获取意见反馈列表",
-        "url": "./mock/emap/campus-data.json",
         "controls": [{
             "name": "tenantId",
             "dataType": "string",
