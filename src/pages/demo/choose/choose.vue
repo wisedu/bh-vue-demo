@@ -8,8 +8,8 @@
             <div class="bh-mv-8 bh-mb-16">
                 <bh-choose
                     v-ref:choose1
-                    left-width='70%'
-                    right-width='30%'
+                    left-width='65%'
+                    right-width='35%'
                     :left-params='{username:222}'
                     :right-params='{username:111}'
                     type='get'

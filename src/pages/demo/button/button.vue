@@ -119,6 +119,19 @@
                             <bh-button type="primary" @click='setMinDate'>设置min date</bh-button>
                         </div>
                     </div>
+                </div><div class="bh-mv-8 bh-mb-16">
+                    <h3 class='bh-mb-8'>DateTimePicker(bootstrap)</h3>
+                    <div class="bh-row">
+                        <div class="bh-col-md-6">
+                            <bh-datetimepicker v-ref:bsdt :disabled='bsdateDisabled' :options='{format: "yyyy-MM", minDate: "2017-03-21"}' @change='bsChange'></bh-datetimepicker>
+                        </div>
+                        <div class="bh-col-md-5">
+                            <bh-button type="primary" @click='getBsDate'>获取选择</bh-button>
+                            <bh-button type="primary" @click='resetBsDate'>清空</bh-button>
+                            <bh-button type="primary" @click='disableBsDate'>禁用</bh-button>
+                            <bh-button type="primary" @click='enableBsDate'>启用</bh-button>
+                        </div>
+                    </div>
                 </div>
                 <div class="bh-mv-8 bh-mb-16">
                     <h3 class='bh-mb-8'>FileUpload // TODO</h3>
@@ -146,6 +159,7 @@
     import BhTextarea from 'components/bh-textarea/bhTextarea';
     import BhDropdown from 'components/bh-dropdown/bhDropdown';
     import BhDatetime from 'components/bh-datetime/bhDatetime';
+    import BhDatetimepicker from 'components/bh-datetimepicker/bhDatetimepicker';
     import BhFileupload from 'components/bh-fileupload/bhFileupload';
 
     var candidates = ['aaaa', 'abcd', 'alfgh', 'allow', 'basdf', 'boosdf'];
@@ -181,6 +195,7 @@
                 taDisabled: false,
                 disableSwitch: true,
                 dateDisabled: true,
+                bsdateDisabled: false,
                 isOn: true,
                 inputVal: '默认文字',
                 inputVal2: '',
@@ -234,6 +249,21 @@
             },
             enableDate () {
                 this.dateDisabled = false;
+            },
+            disableBsDate () {
+                this.bsdateDisabled = true;
+            },
+            enableBsDate () {
+                this.bsdateDisabled = false;
+            },
+            getBsDate () {
+                alert(this.$refs.bsdt.getValue());
+            },
+            resetBsDate () {
+                this.$refs.bsdt.clear();
+            },
+            bsChange (val) {
+                console.log('change to ' + val);
             },
             disallowCheck (val) {
                 this.isdisabled = true;
@@ -301,7 +331,7 @@
         },
         components: {
             BhButton, BhCard, BhToggle, BhCheckbox, BhChecklist, BhRadio, BhSwitch, BhInput, BhSearch, BhTextarea,
-            BhDropdown, BhDatetime, BhFileupload
+            BhDropdown, BhDatetime, BhFileupload, BhDatetimepicker
         }
     };
 </script>

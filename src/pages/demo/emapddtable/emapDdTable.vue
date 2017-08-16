@@ -7,7 +7,7 @@
             <div class="bh-row">
                 <div class="bh-col-md-12 bh-mt-32">
                     <emap-dd-table v-ref:ddt :options='options'></emap-dd-table>
-                    <button class="bh-btn bh-btn-primary" @click='getVal'>获取值</button>
+                    <button class="bh-btn bh-btn-primary bh-mt-8" @click='getVal'>获取值</button>
                 </div>
             </div>
         </section>
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-    import Sys from 'config/sysconf'
+    import Sys from 'config/sysconf';
     import EmapDdTable from 'components/emap-dd-table/emapDdTable.vue';
 
     export default {

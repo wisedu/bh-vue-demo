@@ -5,11 +5,11 @@
                 <h2>富文本编辑器</h2>
             </header>
             <div class="bh-row bh-mt-16">
-                <div class="bh-col-md-6 bh-mv-8 bh-mb-16">
+                <div class="bh-col-md-7 bh-mv-8 bh-mb-16">
                     <emap-editor v-ref:ee :options='options'></emap-editor>
                 </div>
                 <div class="clearfix"></div>
-                <div class="bh-col-md-6 bh-mv-8">
+                <div class="bh-col-md-7 bh-mv-8">
                     <button class='bh-btn bh-btn-default' @click='getContent'>获取输入内容</button>
                     <button class='bh-btn bh-btn-default' @click='setValue'>设置内容</button>
                     <button class='bh-btn bh-btn-default' @click='clear'>清空内容</button>

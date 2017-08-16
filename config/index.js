@@ -14,7 +14,7 @@ module.exports = {
     env: require('./dev.env'),
     assetsSubDirectory: '',
     assetsPublicPath: '/',
-    port: 3000,
+    port: 8000,
     proxyTable: {
       '/fe_components/mock/**/*.json': 'http://res.wisedu.com/',
       '/xsxx/**/*.do': 'http://172.20.6.12:8080'

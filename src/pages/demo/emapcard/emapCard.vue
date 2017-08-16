@@ -22,6 +22,7 @@
             return {
                 options: {
                     pagePath: Sys.contextPath + 'mock/emap/major-model.json',
+                    url: 'http://172.16.7.75:8000/bh-vue/grid/data',
                     action: 'TABLE',
                     template: require('./cardTpl.html')
                 }

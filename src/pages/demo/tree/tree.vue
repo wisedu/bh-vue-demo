@@ -137,8 +137,9 @@
             select1 (item) {
                 this.tip1 = item.label + ' selected';
             },
-            check1 ({item, checked}) {
-                this.tip2 = item.label + ' ' + checked;
+            check1 (node) {
+                console.log(node);
+                this.tip2 = node.label;
             },
             getSel () {
                 console.log(this.selItem);

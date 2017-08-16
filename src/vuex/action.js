@@ -87,6 +87,10 @@ export const fetchMenus = function ({ dispatch, state }) {
                 'icon': 'iconfont icon-tablet',
                 'href': '#!/calendar'
             }, {
+                'text': '表格导入',
+                'icon': 'iconfont icon-tablet',
+                'href': '#!/excelupload'
+            }, {
                 'text': '文件上传',
                 'icon': 'iconfont icon-tablet',
                 'href': '#!/fileupload'
@@ -142,26 +146,7 @@ export const fetchMenus = function ({ dispatch, state }) {
 };
 
 export const fetchTreeData = ({ dispatch, state }) => {
-    var data = [
-        {
-            icon: 'resources/img/icon/tree/mailIcon.png', label: 'Mail', expanded: true, items: [
-              { icon: 'resources/img/icon/tree/calendarIcon.png', label: 'Calendar', id: 11, username: 'qqq' },
-              { icon: 'resources/img/icon/tree/contactsIcon.png', label: 'Contacts', selected: true }
-            ]
-        },
-        {
-            icon: 'resources/img/icon/tree/folder.png', label: 'Inbox', expanded: true, items: [
-             { icon: 'resources/img/icon/tree/folder.png', label: 'Admin' },
-             { icon: 'resources/img/icon/tree/folder.png', label: 'Corporate' },
-             { icon: 'resources/img/icon/tree/folder.png', label: 'Finance' },
-             { icon: 'resources/img/icon/tree/folder.png', label: 'Other' }
-            ]
-        },
-        { icon: 'resources/img/icon/tree/recycle.png', label: 'Deleted Items' },
-        { icon: 'resources/img/icon/tree/notesIcon.png', label: 'Notes' },
-        { iconsize: 14, icon: 'resources/img/icon/tree/settings.png', label: 'Settings' },
-        { icon: 'resources/img/icon/tree/favorites.png', label: 'Favorites' }
-    ];
+    var data = [{"id":"4d5ba82a-c251-4e04-9b12-627e38d8a4b4","label":"晓庄学院-学生组","parentId":"125950196096958464","description":"","dynamic":true,"userCount":0,"inType":10,"leaf":true,"expanded":false,"selected":false},{"id":"3b7edcf0-01ec-4fe3-bd26-6dcbe55db13b","label":"晓庄学院-老师组","parentId":"125950196096958464","description":"","dynamic":true,"userCount":0,"inType":10,"leaf":true,"expanded":false,"selected":false},{"id":"f750354d-bea8-436b-a78a-684970c3dd09","label":"应用测试","parentId":"125950196096958464","description":"","dynamic":false,"userCount":0,"inType":10,"leaf":true,"expanded":false,"selected":false}];
 
     dispatch(types.TREE_DATA, data);
 };

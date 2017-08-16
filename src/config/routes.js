@@ -66,6 +66,11 @@ export default {
             require(['pages/demo/calendar/calendar'], resolve);
         }
     },
+    '/excelupload': {
+        component: (resolve) => {
+            require(['pages/demo/excelupload/excelUpload'], resolve);
+        }
+    },
     '/fileupload': {
         component: (resolve) => {
             require(['pages/demo/fileupload/fileupload'], resolve);

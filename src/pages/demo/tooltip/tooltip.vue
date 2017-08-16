@@ -23,7 +23,7 @@
                 </a>
             </bh-tooltip>
             <bh-tooltip target='.box1' :auto-hide='false' :show-footer='true'>
-                我会自动关闭@@
+                我不会自动关闭@@
             </bh-tooltip>
             <bh-tooltip target='.box2' position='top'>
                 方向向上

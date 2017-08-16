@@ -3,8 +3,9 @@
         <h2>表格控件</h2>
         <section>
             <bh-button @click='init' class='bh-mv-16'>初始化</bh-button>
-            <bh-button @click='importFile' class='bh-mv-16'>导入</bh-button>
+            <!-- <bh-button @click='importFile' class='bh-mv-16'>导入</bh-button> -->
             <bh-button @click='getFirstRow' class='bh-mv-16'>获取第一行数据</bh-button>
+            <bh-button @click='getCheckedRow' class='bh-mv-16'>获取复选数据</bh-button>
             <emap-datatable v-ref:dt1 :options='options' @edit='edit' @del='del'></emap-datatable>
         </section>
     </article>
@@ -22,10 +23,11 @@
                     // pagePath: 'http://localhost:3000/mock/emap/major-model.json',
                     pagePath: Sys.contextPath + 'mock/emap/campus-meta.json',
                     // method: 'post',
+                    checkable: true,
                     url: 'mock/emap/campus-data.json',
                     action: 'feedback_list',
                     selectionMode: 'singleRow',
-                    // lazyInit: true,
+                    lazyInit: true,
                     params: {
                         a: ''
                     },
@@ -67,6 +69,9 @@
             },
             getFirstRow () {
                 console.log(this.$refs.dt1.getDataByRow(0));
+            },
+            getCheckedRow () {
+                console.log(this.$refs.dt1.checkedRecords());
             },
             edit (row) {
                 var vm = this;

@@ -3,6 +3,7 @@
         <section class="bh-mh-8 bh-mv-8">
             <header>
                 <h2>高级表格控件</h2>
+                <div class='bh-mt-4'>注意：emapCard 的实现无法友好的指定 GET 请求方式</div>
             </header>
             <div class="bh-row">
                 <div class="bh-col-md-12 bh-mt-32">
@@ -42,6 +43,7 @@
             return {
                 options: {
                     pagePath: Sys.contextPath + 'mock/emap/campus-meta.json',
+                    url: 'http://172.16.7.75:8000/bh-vue/grid/data',
                     method: 'GET',
                     action: 'feedback_list',
                     selectionMode: 'singleRow',
@@ -73,7 +75,8 @@
                             name: 'del',
                             type: 'link'
                         }]
-                    }
+                    },
+                    template: require('./cardTpl.html')
                 }
             };
         },
